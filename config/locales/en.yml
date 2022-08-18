@@ -11,12 +11,16 @@ en:
       search_btn: "Search food"
       en: "English"
       vi: "Vietnamese"
-      title: "Product list"
-      add_cart: "Add cart"
+      title: "Products list"
     help: 
       heading: "Help"
       page: "Static Page Help"
       find_me: "Find me in app/views/static_pages/help.html.erb"
+  products:
+    product:
+      add_cart: "Add cart"
+      quantity: "Quantity: "
+      price: "Price: "
   admin:
     static_pages:
       index: 

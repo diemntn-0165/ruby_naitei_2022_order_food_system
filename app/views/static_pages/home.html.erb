@@ -22,25 +22,8 @@
       <h2><%= t(".title")%></h2>
     </div>
     <div class="row">
-      <!-- Each food item starts -->
-      <div class="col-xs-12 col-sm-6 col-md-4 food-item">
-        <div class="food-item-wrap">
-          <div class="figure-wrap bg-image" data-image-src="<%= asset_path("food1.jpg") %>" >
-            <div class="distance"><i class="fa fa-pin"></i>1240m</div>
-            <div class="rating pull-left"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> </div>
-            <div class="review pull-right"><a href="#">198 reviews</a> </div>
-          </div>
-          <div class="content">
-            <h5><a href="profile.html">The South"s Best Fried Chicken</a></h5>
-            <div class="product-name">Fried Chicken with cheese</div>
-            <div class="price-btn-block"> <span class="price">$ 15,99</span>
-            <% if logged_in? %>
-              <a href="" class="btn theme-btn-dash pull-right"><%= t(".add_cart")%></a>
-            <% end %>
-            </div>
-          </div>
-        </div>
-      </div>
+      <%= render @products%>
     </div>
+    <%== pagy_bootstrap_nav @pagy %>
   </div>
 </section>

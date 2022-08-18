@@ -10,11 +10,15 @@ vi:
       top: "Giao hàng & Mang theo đơn hàng"
       search_btn: "Tìm kiếm"
       title: "Danh sách sản phẩm"
-      add_cart: "Thêm vào giỏ"
     help: 
       heading: "Giúp đỡ"
       page: "Trang giúp đỡ Static Page"
       find_me: "Tìm tôi trong app/views/static_pages/help.html.erb"
+  products:
+    product:
+      add_cart: "Thêm vào giỏ"
+      quantity: "Số lượng: "
+      price: "Giá: "
   admin:
     static_pages:
       index: 
@@ -31,6 +35,19 @@ vi:
         price: "Giá"
         quantity: "Số lượng"
         cate: "Loại sản phẩm"
+      index:
+        new_product: "Sản phẩm mới"
+        id: "ID"
+        name: "Tên sản phẩm"
+        price: "Giá"
+        quantity: "Số lượng"
+        image: "Hình ảnh"
+        created_at: "Thời gian tạo"
+        updated_at: "Cập nhật"
+        actions: "Hành động"
+      product:
+        edit: "Chỉnh sửa"
+        delete: "Xóa"
     shared:
       error_messages:
         intro: "Biểu mẫu có"
