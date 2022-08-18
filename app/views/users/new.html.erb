@@ -1,7 +1,7 @@
 <% provide :title, t(".heading") %>
-<h1><%= t(".heading") %></h1>
-<div class="row">
-  <div class="col-md-7 col-md-offset-3">
+<div class="container user-container">
+  <h1><%= t(".heading") %></h1>
+  <div class="row">
     <%= form_for(@user) do |f| %>
       <%= render "shared/error_messages" %>
       <%= f.label :name, t(".form.name") %>
@@ -21,7 +21,7 @@
         <%= f.submit t(".form.btn_submit"), class: "btn btn-primary" %>
       </div>
       <hr>
-      <%= t ".form.have_account" %><%= link_to t(".form.login"), login_path %>
+      <%= t(".form.have_account") %><%= link_to t(".form.login"), login_path %>
     <% end %>
   </div>
 </div>

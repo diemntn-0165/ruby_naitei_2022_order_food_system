@@ -4,32 +4,13 @@ vi:
   layouts:
     application_admin:
       heading: "Phía người quản lý"
-  layouts:
-    header:
-      home: "Trang chủ"
-      help: "Hỗ  trợ"
-      users: "Người dùng"
-      login: "Đăng nhập"
-      logout: "Đăng xuất"
-      profile: "Hồ sơ"
-      account: "Tài khoản"
-      settings: "Cài đặt"
-      app: "Sample App"
-    footer:
-      about: "Giới thiệu"
-      contact: "Liên hệ"
-      news: "Tin tức"
-      by: "viết bởi"
-      author: "Michael Hartl"
-      tutor: "Hướng dẫn Ruby on Rails"
-      book: "Huong dan Ruby on Rails"
   static_pages:
     home: 
       heading: "Trang chủ"
-      page: "Trang chủ Static Page"
-      find_me: "Tìm tôi trong app/views/static_pages/home.html.erb"
-      en: "Tiếng Anh"
-      vi: "Tiếng Việt"
+      top: "Giao hàng & Mang theo đơn hàng"
+      search_btn: "Tìm kiếm"
+      title: "Danh sách sản phẩm"
+      add_cart: "Thêm vào giỏ"
     help: 
       heading: "Giúp đỡ"
       page: "Trang giúp đỡ Static Page"
@@ -65,6 +46,8 @@ vi:
         password: "Mật khẩu"
         password_confirm: "Xác nhận mật khẩu"
         btn_submit: "Tạo tài khoản"
+        have_account: "Bạn có tài khoản? "
+        login: "Đăng nhập"
     show:
       user_not_found: "Không tìm thấy người dùng"
       name: "Tên: "
@@ -100,6 +83,8 @@ vi:
       account: "Tài khoản"
       profile: "Hồ sơ"
       settings: "Cài đặt"
+      en: "Tiếng Anh"
+      vi: "Tiếng Việt"
     footer:
       top: "Giao hàng & Mang theo đơn hàng"
       about: "Giới thiệu"

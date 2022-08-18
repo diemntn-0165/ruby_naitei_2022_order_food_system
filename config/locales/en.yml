@@ -7,10 +7,12 @@ en:
   static_pages:
     home: 
       heading: "Home"
-      page: "Static Page"
-      find_me: "Find me in app/views/static_pages/home.html.erb"
+      top: "Order Delivery & Take-Out"
+      search_btn: "Search food"
       en: "English"
       vi: "Vietnamese"
+      title: "Product list"
+      add_cart: "Add cart"
     help: 
       heading: "Help"
       page: "Static Page Help"
@@ -31,6 +33,8 @@ en:
         password: "Password"
         password_confirm: "Password confirmation"
         btn_submit: "Create my account"
+        have_account: "Have account? "
+        login: "Login"
     show:
       user_not_found: "User not found"
       name: "Name: "
@@ -66,8 +70,10 @@ en:
       account: "Account"
       profile: "Profile"
       settings: "Settings"
+      en: "English"
+      vi: "Vietnamese"
     footer:
-      top: "Order Delivery &amp; Take-Out"
+      top: "Order Delivery & Take-Out"
       about: "About"
       contact: "Contact"
       history: "History"
