@@ -1,0 +1,44 @@
+<% provide :title, t(".order") %>
+<div class="container order-addon">
+  <h1><%= t(".order") %></h1>
+  <%= form_for [@order], url: new_order_path do |f| %>
+    <div class="form-group">
+      <%= f.label :name, t(".user_name") %>
+      <%= f.text_field :user_name, class: "form-control"%>
+    </div>
+    <div class="form-group">
+      <%= f.label :address, t(".address") %>
+      <%= f.text_area :address, size: "50x6" , class: "form-control"%>
+    </div>
+    
+    <div class="form-group">
+      <%= f.label :payment_type, t(".payment_type") %>
+      <%= f.select :payment_type, options_for_select([[t(".choose"), ""], t(".card"), t(".cash")]), {class: "form-control"} %>
+    </div>
+    <label><%= t(".list_products_order") %></label>
+    <div class="collapse in order-content">
+      <% get_products_cart.each do |product| %>
+        <div class="food-item white">
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-lg-8">
+              <div class="rest-logo pull-left">
+                  <%= image_tag(product[:product].image.url, class: "restaurant-logo pull-left") if product[:product].image?  %>
+              </div>
+              <div class="rest-descr">
+                  <h6><a href="#"><%= product[:product].name %></a></h6>
+                  <p> <%= number_to_currency(product[:product].price) %></p>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-lg-4 pull-right item-cart-info"> <span class="price pull-left"><%= product[:count] %></span>
+            </div>
+          </div>
+        </div>
+      <% end %>
+      <span class="price pull-left"><%= t(".total")%></span>
+      <div class="col-xs-12 col-sm-12 col-lg-4 pull-right">
+        <span class="price pull-left"><%= number_to_currency(get_total_price) %></span>
+        </div>
+    </div>
+    <%= f.submit t(".order"), class: "btn theme-btn-dash pull-right cart-btn-order" %>
+  <% end %>
+</div>
