@@ -82,26 +82,15 @@ vi:
     orders:
       index:
         id: "Order ID"
+        user_id: "User ID"
         user_name: "Tên người dùng"
-        phone_number: "Số điện thoại"
         address: "Địa chỉ"
-        status: "Tình trạng hóa đơn   "
-        total: "Số tiền"
-        payment_type: "Phương thức"
+        status: "Tình trạng"
+        total: "Tổng hóa đơn"
+        payment_type: "Phương thức thanh toán"
         created_at: "Thời gian tạo"
+        updated_at: "Cập nhật"
         actions: "Hành động"
-      order:
-        delete: "Xóa"
-        approve: "Phê duyệt"
-        inactive: "Chưa phê duyệt"
-        avtived: "Đã phê duyệt"
-        paid: "Đã thanh toán"
-      update:
-        approve_success: "Phê duyệt thành công"
-        approve_failed: "Phê duyệt thất bại"
-      destroy:
-        delete_success: "Xóa thành công"
-        delete_failed: "Xóa thất bại"
     shared:
       error_messages:
         intro: "Biểu mẫu có"
@@ -152,6 +141,7 @@ vi:
       logout: "Đăng xuất"
       users: "Người dùng"
       account: "Tài khoản"
+      orders: "Đơn đặt hàng"
       profile: "Hồ sơ"
       settings: "Cài đặt"
       en: "Tiếng Anh"
@@ -195,3 +185,16 @@ vi:
     add_product:
       add_to_cart_success: "Thêm sản phẩm vào giỏ hàng thành công"
       product_not_found: "Không tìm thấy sản phẩm"
+  orders:
+    new:
+      order: "Đặt hàng"
+      list_products_order: "Danh sách sản phẩm"
+      user_name: "Tên người đặt hàng"
+      address: "Địa chỉ"
+      phone_number: "Số điện thoại"
+      note: "Ghi chú"
+      payment_type: "Phương thức thanh toàn"
+      choose: "Chọn một"
+      card: "Thẻ"
+      cash: "Tiền mặt"
+      total: "Tổng hóa đơn"

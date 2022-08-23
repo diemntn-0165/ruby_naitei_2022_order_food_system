@@ -9,7 +9,7 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 // require("jquery")
 import "bootstrap"
-import "../stylesheets/application_admin"
+import "../../assets/stylesheets/application_admin"
 require("jquery")
 require("./js/jquery.min")
 require("./js/tether.min")

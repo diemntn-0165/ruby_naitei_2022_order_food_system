@@ -17,6 +17,8 @@ Rails.application.routes.draw do
       post "/:id/plus-product", to: "carts#plus_product", as: "plus_product"
       post "/:id/minus-product", to: "carts#minus_product", as: "minus_product"
     end
+    resources :orders, only: %i(new create show)
+    
     resources :users, only: %i(new create show)
     namespace :admin do
       root to: "static_pages#index"
