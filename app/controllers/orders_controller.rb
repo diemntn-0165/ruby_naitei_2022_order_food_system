@@ -1,5 +1,10 @@
 class OrdersController < ApplicationController
   before_action :get_order, only: :show
+  def index
+    @pagy, @orders = pagy(current_user.orders.newest,
+                          items: Settings.pagy.item_5)
+  end
+
   def new
     @order = Order.new
   end
@@ -13,8 +18,11 @@ class OrdersController < ApplicationController
                                quantity: product["count"],
                                price: product["price"]}
         DetailOrder.create(detail_order_params)
+        count = product["count"].to_i
+        updated_product_quantity(product_id.to_i, count)
       end
       session.delete(:cart)
+      flash[:success] = t ".create_order_success"
       redirect_to @order
     else
       flash[:danger] = t(".create_order_fail")
@@ -29,7 +37,7 @@ class OrdersController < ApplicationController
   def order_params
     params.require(:order)
           .permit(:user_id, :user_name, :address, :phone_number,
-                  :note, :payment_type, total: session[:cart]["tottal_price"])
+                  :note, :payment_type, :total)
   end
 
   def total_price_from_cart
@@ -42,5 +50,11 @@ class OrdersController < ApplicationController
 
     flash[:danger] = t(".order_not_found")
     redirect_to root_path
+  end
+  
+  def updated_product_quantity(id, count) 
+    @product = Product.find_by_id(id)
+    @product.quantity -= count
+    @product.save
   end
 end
