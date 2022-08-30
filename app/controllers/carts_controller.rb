@@ -7,7 +7,8 @@ class CartsController < ApplicationController
     fetch_add_product
     session[:cart]["tottal_count"] += 1
     session[:cart]["tottal_price"] += @product.price
-    render json: {status: 200, message: t(".add_to_cart_success"), "nav-cart-count": session[:cart]["tottal_count"]}
+    render json: {status: 200, message: t(".add_to_cart_success"), 
+                  "nav-cart-count": session[:cart]["tottal_count"]}
   end
 
   # POST /cart
@@ -32,9 +33,9 @@ class CartsController < ApplicationController
     session[:cart]["tottal_count"] += 1
     session[:cart]["tottal_price"] +=
       session[:cart]["products"][params[:id]]["price"]
-    render json: {status: 200, message: t(".plus_product_success"), 
+    render json: {status: 200, message: t(".plus_product_success"),
                   "product-count": session[:cart]["products"][params[:id]]["count"],
-                  "total-price-cart": session[:cart]["tottal_price"]
+                  "total-price-cart": session[:cart]["tottal_price"],
                   "nav-cart-count": session[:cart]["tottal_count"]}
   end
 
@@ -47,9 +48,8 @@ class CartsController < ApplicationController
     zero_delete_product
     render json: {status: 200, message: t(".minus_product_success"),
                   "product-count": session[:cart]["products"][params[:id]]["count"],
-                  "total-price-cart": session[:cart]["tottal_price"]
-                  "nav-cart-count": session[:cart]["tottal_count"]
-                }
+                  "total-price-cart": session[:cart]["tottal_price"],
+                  "nav-cart-count": session[:cart]["tottal_count"]}
   end
 
   private

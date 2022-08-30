@@ -19,11 +19,11 @@
             </div>
             <!-- end:col -->
             <div class="col-xs-12 col-sm-12 col-lg-4 pull-right item-cart-info"> <span class="price pull-left" id=<%= "product-count_".concat(value[:product].id.to_s) %> ><%= value[:count] %></span> 
-              <%= form_with(url: plus_product_path(id: value[:product].id ), html: {class:"increase", :'data-id' => product.id} ) do |f| %>
-                <%= f.submit "+", class: "btn theme-btn-dash pull-right btn-increase" %>
+              <%= form_with(url: plus_product_path(id: value[:product].id ), html: {class:"increase", :"data-id" => value[:product].id} ) do |f| %>
+                <%= f.submit "+", class: "btn btn-small btn btn-secondary pull-right btn-increase" %>
               <% end %>
-              <%= form_with(url: minus_product_path(id: value[:product].id ), html: {class:"reduce", :'data-id' => product.id} ) do |f| %>
-                <%= f.submit "-", class: "btn theme-btn-dash pull-right btn-reduce" %>
+              <%= form_with(url: minus_product_path(id: value[:product].id ), html: {class:"reduce", :"data-id" => value[:product].id} ) do |f| %>
+                <%= f.submit "-", class: "btn btn-small btn btn-secondary pull-right btn-reduce" %>
               <% end %>
             </div>
           </div>

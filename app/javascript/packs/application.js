@@ -9,7 +9,6 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import "../../assets/stylesheets/application"
 require("./js/cart");
-import $ from 'jquery';
 
 Rails.start()
 Turbolinks.start()
