@@ -2,8 +2,8 @@ vi:
   number:
     currency:
       format:
-        unit: "vnd" 
-        delimiter: ","
+        unit: " VND" 
+        delimiter: "."
         format: "%n%u"
   hello: "Xin chào thế giới"
   base_title: "Hệ thống đặt đồ ăn"
@@ -88,11 +88,11 @@ vi:
     orders:
       index:
         heading: "Danh sách đơn hàng"
-        id: "Order ID"
+        id: "ID"
         user_name: "Tên người dùng"
         phone_number: "Số điện thoại"
         address: "Địa chỉ"
-        status: "Tình trạng hóa đơn   "
+        status: "   Tình trạng hóa đơn   "
         total: "Số tiền"
         payment_type: "Phương thức"
         created_at: "Thời gian tạo"
@@ -101,7 +101,7 @@ vi:
         delete: "Xóa"
         approve: "Phê duyệt"
         inactive: "Chưa phê duyệt"
-        avtived: "Đã phê duyệt"
+        actived: "Đã phê duyệt"
         paid: "Đã thanh toán"
       update:
         approve_success: "Phê duyệt thành công"
@@ -172,6 +172,7 @@ vi:
       en: "Tiếng Anh"
       vi: "Tiếng Việt"
       cart: "Giỏ hàng"
+      orders: "Đơn đặt hàng"
     footer:
       top: "Giao hàng & Mang theo đơn hàng"
       about: "Giới thiệu"
@@ -207,6 +208,10 @@ vi:
       cart_empty: "Giỏ hàng trống"
       total: "Tổng: "
       order: "Đặt hàng"
+    minus_product:
+      minus_product_success: "Sản phẩm giảm đã thành công"
+    plus_product:
+      plus_product_success: "Sản phẩm tăng đã thành công"
     add_product:
       add_to_cart_success: "Thêm sản phẩm vào giỏ hàng thành công"
       product_not_found: "Không tìm thấy sản phẩm"
@@ -236,3 +241,23 @@ vi:
       payment_type: "Phương thức thanh toàn: "
       list_products_order: "Danh sách sản phẩm: "
       total: "Tổng hóa đơn"
+    index:
+      orders: "Danh sách đơn hàng"
+      no: "Thứ tự"
+      user_name: "Tên người dùng"
+      phone_number: "Số điện thoại"
+      address: "Địa chỉ"
+      status: "Tình trạng hóa đơn"
+      total: "Số tiền"
+      payment_type: "Phương thức"
+      created_at: "Thời gian đặt hàng"
+      actions: "Hành động"
+      orders_empty: "Danh sách đơn hàng trống"
+      inactive: "Chưa phê duyệt"
+      actived: "Đã phê duyệt"
+      paid: "Đã thanh toán"
+    order:
+      order_detail: "Xem chi tiết "
+    create:
+      create_order_fail: "Tạo đơn đặt hàng không thành công"
+      create_order_success: "Tạo đơn đặt hàng thành công"
