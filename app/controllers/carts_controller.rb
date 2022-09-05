@@ -3,7 +3,6 @@ class CartsController < ApplicationController
   before_action :get_products, only: [:create]
   # POST /cart/:id/add-product
   def create
-    get_products
     create_empty_cart if session[:cart].nil?
     fetch_add_product
     session[:cart]["tottal_count"] += 1

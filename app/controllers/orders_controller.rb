@@ -18,6 +18,7 @@ class OrdersController < ApplicationController
                                quantity: product["count"],
                                price: product["price"]}
         DetailOrder.create(detail_order_params)
+        updated_product_quantity(product_id.to_i, product["count"])
       end
       session.delete(:cart)
       flash[:success] = t ".create_order_success"
@@ -48,5 +49,11 @@ class OrdersController < ApplicationController
 
     flash[:danger] = t(".order_not_found")
     redirect_to root_path
+  end
+
+  def updated_product_quantity(id, count) 
+    @product = Product.find_by_id(id)
+    @product.quantity -= count
+    @product.save
   end
 end

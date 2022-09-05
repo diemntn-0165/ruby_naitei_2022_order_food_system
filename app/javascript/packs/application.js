@@ -7,14 +7,17 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
-import "../../assets/stylesheets/application"
+window.Tether = require("tether");
+require("./js/bootstrap.min")
+// require("./js/animsition.min")
+// require("./js/jquery.min")
+require("bootstrap")
+require("jquery")
 require("./js/cart");
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
-require("jquery")
-import "bootstrap"
 global.toastr = require("toastr");
 toastr.options = {
   closeButton: false,

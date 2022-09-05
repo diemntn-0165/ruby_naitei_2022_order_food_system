@@ -7,7 +7,7 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
-import "../stylesheets/application_admin"
+import "./../../assets/stylesheets/application_admin"
 require("./js/jquery.min")
 require("./js/tether.min")
 require("./js/bootstrap.min")
@@ -20,4 +20,3 @@ require("./js/foodpicky.min")
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
-global.toastr = require("toastr")
