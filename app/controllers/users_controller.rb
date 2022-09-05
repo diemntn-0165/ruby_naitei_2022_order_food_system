@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-  before_action :find_user_by_id, except: %i(new create)
+  # before_action :authenticate_user!
+  # before_action :find_user_by_id, except: %i(new create)
   def new
     @user = User.new
   end
@@ -27,13 +28,7 @@ class UsersController < ApplicationController
     end
   end
 
-  def show
-    @user = User.find_by id: params[:id]
-    return if @user
-
-    flash[:danger] = t(".user_not_found")
-    redirect_to root_path
-  end
+  def show; end
 
   private
 
@@ -47,7 +42,7 @@ class UsersController < ApplicationController
     @user = User.find_by id: params[:id]
     return if @user
 
-    flash[:error] = t ".not_found"
+    flash[:error] = t ".user_not_found"
     redirect_to root_path
   end
 end

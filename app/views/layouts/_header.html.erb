@@ -10,7 +10,7 @@
           <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><%= t(".food") %></a>
               <div class="dropdown-menu"> <a class="dropdown-item" href="#"><%= t(".food_results") %></a></div>
           </li>
-          <% if logged_in? %>
+          <% if user_signed_in? %>
             <li class="nav-item dropdown">
               <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                 <%= current_user.name %>
@@ -21,14 +21,14 @@
                 </li>
                 <li><%= link_to t(".profile"), current_user, class:"dropdown-item" %></li>
                 <li>
-                <%= link_to t(".logout"), logout_path, method: :delete, class:"dropdown-item" %>
+                <%= link_to t(".logout"), destroy_user_session_path, class:"dropdown-item" %>
                 </li>
               </ul>
               <li class="nav-item"><%= link_to t(".cart"), carts_path, method: :get, class:"nav-link" %></li>
               <li class="nav-item custom-control-indicator"><span class="nav-item nav-cart-count"><%= get_cart_count_header %></span></li>
             </li>
           <% else %>
-            <li class="nav-item"><%= link_to t(".login"), login_path, class:"nav-link" %></li>
+            <li class="nav-item"><%= link_to t(".login"), new_user_session_path, class:"nav-link" %></li>
           <% end %>
           <li class="nav-item"><%= link_to t(".en"), {locale: :en}, class: "nav-link" %></li>
           <li class="nav-item"><%= link_to t(".vi"), {locale: :vi}, class: "nav-link" %></li>

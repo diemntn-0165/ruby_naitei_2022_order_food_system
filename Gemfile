@@ -9,6 +9,7 @@ gem "bootsnap", ">= 1.4.4", require: false
 gem "bootstrap-sass", "3.4.1"
 gem "carrierwave"
 gem "config"
+gem "devise"
 gem "faker", "2.22.0"
 gem "figaro"
 gem "font-awesome-sass", "~> 6.1.2"

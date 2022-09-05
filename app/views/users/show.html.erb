@@ -1,4 +1,4 @@
-<% provide(:title, @user.name) %>
+<% provide(:title, current_user.name) %>
 <div class="row">
   <section class="inner-page-hero bg-image">
     <div class="profile">
@@ -6,18 +6,18 @@
         <h1><%= t ".page" %></h1>
         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 profile-img">
           <div class="image-wrap">
-            <figure><%= gravatar_for @user %></figure>
+            <figure><%= gravatar_for current_user %></figure>
           </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 profile-desc">
             <div class="pull-left right-text white-txt">
-              <h2><%=t(".name")%><%= @user.name %></h2>
+              <h2><%=t(".name")%><%= current_user.name %></h2>
               <ul class="nav nav-inline">
-                <p><li class="nav-item"><%=t(".address")%><%= @user.address %></li></p>
-                <p><li class="nav-item"><%=t(".phone_number")%><%= @user.phone_number %></li></p>
-                <p><li class="nav-item"><%=t(".email")%><%= @user.email %></li></p></p>
+                <p><li class="nav-item"><%=t(".address")%><%= current_user.address %></li></p>
+                <p><li class="nav-item"><%=t(".phone_number")%><%= current_user.phone_number %></li></p>
+                <p><li class="nav-item"><%=t(".email")%><%= current_user.email %></li></p></p>
               </ul>
-              <%= link_to t(".edit"), edit_user_path(@user), class: "btn btn-success" %>
+              <%= link_to t(".edit"), edit_user_path(current_user), class: "btn btn-success" %>
             </div>
         </div>
       </div>

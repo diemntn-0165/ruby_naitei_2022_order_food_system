@@ -1,4 +1,8 @@
 class User < ApplicationRecord
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
   has_many :orders, dependent: :destroy
 
   before_save :downcase_email
@@ -24,7 +28,7 @@ class User < ApplicationRecord
                             {minimum: Settings.valid.phone_number_min_len,
                              maximum: Settings.valid.phone_number_max_len}
 
-  has_secure_password
+  # has_secure_password
 
   private
 

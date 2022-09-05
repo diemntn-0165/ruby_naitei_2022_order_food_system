@@ -8,13 +8,21 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import "../../assets/stylesheets/application"
+// require("./js/jquery.min")
+require("./js/bootstrap.min")
+// require("./js/animsition.min")
+// require("./js/bootstrap-slider.min")
+// require("./js/jquery.isotope.min")
+// require("./js/headroom")
+// require("./js/foodpicky.min")
+// require("./js/foodpicky")
+require("bootstrap")
 require("./js/cart");
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 require("jquery")
-import "bootstrap"
 global.toastr = require("toastr");
 toastr.options = {
   closeButton: false,
